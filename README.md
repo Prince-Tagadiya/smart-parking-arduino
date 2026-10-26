@@ -1,9 +1,10 @@
 # Smart Parking System with Arduino Uno & 4 Ultrasonic Sensors
 
-A complete, modern IoT Smart Parking solution featuring:
-- **Arduino Uno Code** (`arduino/smart_parking.ino`) reading 4 HC-SR04 ultrasonic sensors.
-- **Circuit Pinout & Connection Guide** (`WIRING.md`).
-- **Real-Time Interactive Local Dashboard** running on `http://localhost:3000` with Web Serial API (direct USB connection) & Simulation Mode.
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Dashboard-brightgreen?style=for-the-badge&logo=github)](https://prince-tagadiya.github.io/smart-parking-arduino/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=for-the-badge&logo=github)](https://github.com/Prince-Tagadiya/smart-parking-arduino)
+
+- 🌐 **Live Deployed Dashboard**: **[https://prince-tagadiya.github.io/smart-parking-arduino/](https://prince-tagadiya.github.io/smart-parking-arduino/)**
+- 📦 **GitHub Repository**: **[https://github.com/Prince-Tagadiya/smart-parking-arduino](https://github.com/Prince-Tagadiya/smart-parking-arduino)**
 
 ---
 
