@@ -18,8 +18,8 @@ const int TRIG_PINS[4] = {2, 4, 6, 8};
 const int ECHO_PINS[4] = {3, 5, 7, 9};
 
 // Distance threshold in centimeters:
-// If an object is closer than this threshold, the slot is considered OCCUPIED (Not Vacant)
-const int OCCUPIED_THRESHOLD_CM = 15; 
+// If an object is closer than this threshold (< 3.0 cm), the slot is considered OCCUPIED (Not Vacant)
+const float OCCUPIED_THRESHOLD_CM = 3.0; 
 
 // Maximum distance HC-SR04 can reliably measure (cm)
 const unsigned long MAX_TIMEOUT_US = 25000; // ~400 cm timeout
@@ -72,7 +72,7 @@ void loop() {
   // Read each sensor sequentially with a short delay to prevent ultrasonic echo cross-interference
   for (int i = 0; i < 4; i++) {
     distances[i] = measureDistance(i);
-    occupied[i] = (distances[i] > 0.5 && distances[i] <= OCCUPIED_THRESHOLD_CM);
+    occupied[i] = (distances[i] > 0.0 && distances[i] < OCCUPIED_THRESHOLD_CM);
     delay(40); // 40ms separation between sensors to avoid overlapping echo pulses
   }
 

@@ -35,10 +35,10 @@ Then open `http://localhost:3000` in Google Chrome or Microsoft Edge.
 
 | Slot | Sensor | VCC | GND | TRIG Pin | ECHO Pin | Threshold |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Slot 1** | HC-SR04 #1 | Breadboard 5V | Breadboard GND | **Pin 2** | **Pin 3** | < 15 cm |
-| **Slot 2** | HC-SR04 #2 | Breadboard 5V | Breadboard GND | **Pin 4** | **Pin 5** | < 15 cm |
-| **Slot 3** | HC-SR04 #3 | Breadboard 5V | Breadboard GND | **Pin 6** | **Pin 7** | < 15 cm |
-| **Slot 4** | HC-SR04 #4 | Breadboard 5V | Breadboard GND | **Pin 8** | **Pin 9** | < 15 cm |
+| **Slot 1** | HC-SR04 #1 | Breadboard 5V | Breadboard GND | **Pin 2** | **Pin 3** | < 3 cm |
+| **Slot 2** | HC-SR04 #2 | Breadboard 5V | Breadboard GND | **Pin 4** | **Pin 5** | < 3 cm |
+| **Slot 3** | HC-SR04 #3 | Breadboard 5V | Breadboard GND | **Pin 6** | **Pin 7** | < 3 cm |
+| **Slot 4** | HC-SR04 #4 | Breadboard 5V | Breadboard GND | **Pin 8** | **Pin 9** | < 3 cm |
 
 > **Important Power Note:**
 > Arduino Uno has only one 5V pin. Connect Arduino **5V** and **GND** to the power rails of a breadboard, then supply 5V and GND to all 4 ultrasonic sensors from the breadboard rails.
@@ -47,8 +47,8 @@ Then open `http://localhost:3000` in Google Chrome or Microsoft Edge.
 
 ## 📊 Dashboard Features
 - **Visual Slots**:
-  - 🟢 **VACANT (Green)**: Open parking bay, live distance measurement (> 15 cm).
-  - 🔴 **NOT VACANT / OCCUPIED (Red)**: Parked vehicle graphic, live distance measurement (≤ 15 cm).
+  - 🟢 **VACANT (Green)**: Open parking bay, live distance measurement (> 3 cm).
+  - 🔴 **NOT VACANT / OCCUPIED (Red)**: Parked vehicle graphic, live distance measurement (< 3 cm).
 - **Direct Web Serial API**: Connects natively to USB serial in Chrome/Edge without any background daemon.
 - **Simulation Mode**: Test with distance sliders and quick toggle buttons even without the Arduino connected.
 - **Audio Feedback**: Subtle chimes when vehicles enter or leave a spot.
